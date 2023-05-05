@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,9 +34,7 @@ class _HomeView extends StatelessWidget {
 class _CustomListTile extends StatelessWidget {
   final MenuItem item;
 
-  const _CustomListTile({
-    required this.item,
-  });
+  const _CustomListTile({required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +52,7 @@ class _CustomListTile extends StatelessWidget {
         size: 16,
       ),
       onTap: () {
-        // TODO: go to route
+        context.push(item.route);
       },
     );
   }

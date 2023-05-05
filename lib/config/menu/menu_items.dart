@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' show IconData, Icons;
+import 'package:widgets_app/config/const/app_routes.dart';
 
 class MenuItem {
   final String title;
@@ -19,12 +20,12 @@ const appMenuItems = <MenuItem>[
     title: 'Botones',
     subtitle: 'Varios botones flutter',
     icon: Icons.smart_button_outlined,
-    route: '/buttons',
+    route: AppRoutes.buttons,
   ),
   MenuItem(
     title: 'Tarjetas',
     subtitle: 'Un contenedor estilizado',
     icon: Icons.credit_card_outlined,
-    route: '/card',
+    route: AppRoutes.cards,
   ),
 ];
