@@ -74,7 +74,9 @@ class _ButtonsView extends StatelessWidget {
                     iconColor: const MaterialStatePropertyAll(Colors.white))),
 
             // CUSTOM BUTTON
-            const CustomButton()
+            const CustomButton(
+              label: 'Prueba',
+            )
           ],
         ),
       ),
@@ -83,7 +85,9 @@ class _ButtonsView extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final String? label;
+
+  const CustomButton({super.key, this.label = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -95,9 +99,10 @@ class CustomButton extends StatelessWidget {
         color: colors.primary,
         child: InkWell(
           onTap: () {},
-          child: const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 24),
-              child: Text('Eso', style: TextStyle(color: Colors.white))),
+          child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+              child: Text(label ?? '',
+                  style: const TextStyle(color: Colors.white))),
         ),
       ),
     );
