@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TutotialScreen extends StatelessWidget {
-  const TutotialScreen({super.key});
+class AppTutorialScreen extends StatelessWidget {
+  const AppTutorialScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
